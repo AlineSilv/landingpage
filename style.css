@@ -18,6 +18,7 @@ ul li a{
     margin-bottom:40px;
     width: 100%;
     display:block;
+    margin-top:-50px;
 }
 .bannerresume img{
     min-width:450px;
@@ -32,6 +33,8 @@ ul li a{
     max-width: 992px;  /* Pattern Alert!*/
     width:100%;
     margin: auto;
+    min-width:320px;
+    padding: 10px 15px;
 }
 
 /*---  Header --- */
@@ -77,6 +80,7 @@ header{
 
 .story-text{
     min-height: 200px;
+    width: 100%;
 }
 .story-text h1{
     color:rgb(33, 9, 63);
@@ -263,6 +267,7 @@ padding-bottom: 40px;
 
 footer{
     background-color:rgb(33, 9, 63) ;
+    width: 100%;
     color: white;
     font-size:14px;
     display: flex;
@@ -281,4 +286,45 @@ footer h1{
 footer h2{
     font-size:14px;
     font-weight: lighter;
+}
+
+/*----- Mobile----- */
+
+@media(max-width:992px){
+    .flex-container{
+        flex-direction: column;
+    }
+    .story{
+        flex-direction: column-reverse;
+    }
+    .story-text{
+        width:100%;
+    }
+    #experience{
+        flex-direction: column-reverse;
+        justify-content:center;
+        align-items: center;
+    }
+    #experience img{
+        width:100%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .list-portfolio{
+        flex-direction:column;
+    }
+    .list-portfolio img{
+        width: 50%;
+        margin: auto;
+    }
+    .list-knowledge{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .item-knowledge{
+        max-width: 90%;
+        margin: auto;
+        width: 100%;
+    }
 }
